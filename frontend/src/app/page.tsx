@@ -1,9 +1,20 @@
+'use client';
+import Users from './users/page';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+
+// Create a client
+const queryClient = new QueryClient();
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center my-8">
-        Frontend Developer Assignment | Digital Pylot
-      </h1>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Users />
+    </QueryClientProvider>
   );
 }
