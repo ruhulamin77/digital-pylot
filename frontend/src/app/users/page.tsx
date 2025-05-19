@@ -122,7 +122,7 @@ export default function Users() {
                 <button
                   key={pg}
                   className={`m-2 ${
-                    currentPage === pg ? 'bg-blue-400' : 'bg-gray-200'
+                    currentPage == pg ? 'bg-blue-400' : 'bg-gray-200'
                   } px-4 py-1 cursor-pointer`}
                   onClick={() => setCurrentPage(pg)}
                 >
